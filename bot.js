@@ -2,15 +2,17 @@ var HTTPS = require('https');
 
 var botID = process.env.BOT_ID;
 
+
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool guy$/;
       botRegexa = /^\/wall/;
       botRegext = /^\/test/;
-
+      
+if(message.name != bot.name) {
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("dimi");
+    postMessage(message.name + "is a cool guy");
     this.res.end();
   }
   else if(request.text && botRegexa.test(request.text)) {
