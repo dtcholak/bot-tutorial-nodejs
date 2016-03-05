@@ -9,7 +9,7 @@ function respond() {
       botRegexa = /^\/wall/;
       botRegext = /^\/test/;
       
-if(request.name != bot.name) {
+
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(request.name + "is a cool guy");
@@ -30,7 +30,6 @@ if(request.name != bot.name) {
     this.res.writeHead(200);
     this.res.end();
   }
-}
 }
 
 function postMessage(response) {
