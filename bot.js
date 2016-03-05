@@ -9,7 +9,7 @@ function respond() {
       botRegexa = /^\/wall/;
       botRegext = /^\/test/;
 
-  if(request.text && botRegex.test(name)) {
+  if(request.text && botRegex.test("name")) {
     this.res.writeHead(200);
     postMessage("dimi");
     this.res.end();
