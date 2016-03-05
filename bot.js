@@ -7,7 +7,7 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool guy$/;
       botRegexa = /^\/wall/;
-      botRegext = "ping";
+      botRegext = /"ping"/;
       
 if(request.name == "Dillan Nayee") {
     this.res.writeHead(200);
