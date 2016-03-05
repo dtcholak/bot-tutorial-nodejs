@@ -15,7 +15,7 @@ function respond() {
   }
   else if(request.text && botRegexa.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("http://imgur.com/gallery/IdvRpeU");
+    postMessage("http://i.imgur.com/IdvRpeU.png");
     this.res.end();
   } else {
     console.log("don't care");
