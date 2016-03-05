@@ -9,10 +9,15 @@ function respond() {
       botRegexa = /^\/wall/;
       botRegext = /^\/test/;
       
-
+if(request.name == "Dimi Tcholakov") {
+    this.res.writeHead(200);
+    postMessage("TERRORIST!");
+    this.res.end();
+}
+else {
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
-    postMessage(request.name + "is a cool guy");
+    postMessage(request.name + " is a cool guy");
     this.res.end();
   }
   else if(request.text && botRegexa.test(request.text)) {
@@ -30,6 +35,7 @@ function respond() {
     this.res.writeHead(200);
     this.res.end();
   }
+}
 }
 
 function postMessage(response) {
