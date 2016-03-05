@@ -19,7 +19,7 @@ function respond() {
     postMessage("http://i.imgur.com/IdvRpeU.png");
     this.res.end();
   }
-  else if(request.text) {
+  else if(request.text && botRegext.test(request.text)) {
     this.res.writeHead(200);
     postMessage("test");
     this.res.end();
