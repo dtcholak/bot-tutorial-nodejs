@@ -9,10 +9,10 @@ function respond() {
       botRegexa = /^\/wall/;
       botRegext = /^\/test/;
       
-if(message.name != bot.name) {
+if(request.name != bot.name) {
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
-    postMessage(message.name + "is a cool guy");
+    postMessage(request.name + "is a cool guy");
     this.res.end();
   }
   else if(request.text && botRegexa.test(request.text)) {
