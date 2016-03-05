@@ -6,7 +6,7 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool guy$/;
       botRegexa = /^\/wall/;
-      botRegext = /\stest/;
+      botRegext = /^\/test/;
 
   if(request.text && botRegex.test(request.text))) {
     this.res.writeHead(200);
