@@ -7,6 +7,7 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\ cool face/;
       botRegexa = /^\/wall/;
+      botRegext = /^\/test/;
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
@@ -17,7 +18,13 @@ function respond() {
     this.res.writeHead(200);
     postMessage("http://i.imgur.com/IdvRpeU.png");
     this.res.end();
-  } else {
+  }
+  else if(request.text) {
+    this.res.writeHead(200);
+    postMessage("test");
+    this.res.end();
+  }
+  else {
     console.log("don't care");
     this.res.writeHead(200);
     this.res.end();
