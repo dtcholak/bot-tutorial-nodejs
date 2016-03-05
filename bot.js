@@ -31,6 +31,7 @@ if(message.name != bot.name) {
     this.res.end();
   }
 }
+}
 
 function postMessage(response) {
   var botResponse, options, body, botReq;
