@@ -24,7 +24,7 @@ function respond() {
   }
 }
 
-function postMessage() {
+function postMessage(response) {
   var botResponse, options, body, botReq;
 
   botResponse = response;
