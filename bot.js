@@ -7,9 +7,9 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool guy$/;
       botRegexa = /^\/wall/;
-      botRegext = /^\/test/;
+      botRegext = "ping";
       
-if(request.name == "Dimi Tcholakov") {
+if(request.name == "Dillan Nayee") {
     this.res.writeHead(200);
     postMessage("TERRORIST!");
     this.res.end();
@@ -27,7 +27,7 @@ else {
   }
   else if(request.text && botRegext.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("test");
+    postMessage("pong");
     this.res.end();
   }
   else {
