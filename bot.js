@@ -7,7 +7,7 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool guy$/;
       botRegexa = /^\/wall/;
-      botRegext = /"ping"/;
+      var ping = new RegExp("ping");
       
 if(request.name == "Dillan Nayee") {
     this.res.writeHead(200);
@@ -25,7 +25,7 @@ else {
     postMessage("http://i.imgur.com/IdvRpeU.png");
     this.res.end();
   }
-  else if(request.text && botRegext.test(request.text)) {
+  else if(request.text && ping.test(request.text)) {
     this.res.writeHead(200);
     postMessage("pong");
     this.res.end();
