@@ -11,7 +11,7 @@ function respond() {
       var mexican = /(mexican|mexicans|mexico)/i;
       
 if(request.name != "Trump") {      
-else if(request.name == "Dillan Nayee") {
+if(request.name == "Dillan Nayee") {
     this.res.writeHead(200);
     postMessage("TERRORIST!");
     this.res.end();
