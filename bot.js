@@ -9,6 +9,7 @@ function respond() {
       var wall = /(wall)/i;
       var ping = /(Ping)/;
       var mexican = /(mexican|mexicans|mexico)/i;
+      
 if(request.name != "Trump") {      
 else if(request.name == "Dillan Nayee") {
     this.res.writeHead(200);
@@ -47,6 +48,11 @@ else {
     this.res.end();
   }
 }
+}
+else {
+  console.log("don't care");
+  this.res.writeHead(200);
+  this.res.end();
 }
 }
 
