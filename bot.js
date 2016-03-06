@@ -8,7 +8,7 @@ function respond() {
       botRegex = /^\/cool guy$/;
       var wall = /(wall)/i;
       var ping = /(Ping)/;
-      var mexican = /(mexican)/i;
+      var mexican = /(mexican|mexicans|mexico)/i;
       
 if(request.name == "Dillan Nayee") {
     this.res.writeHead(200);
@@ -34,6 +34,11 @@ else {
   else if(request.text && ping.test(request.text)) {
     this.res.writeHead(200);
     postMessage("pong");
+    this.res.end();
+  }
+  else if(request.text && mexican.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("When Mexico sends its people, they’re not sending the best. They’re sending people that have lots of problems and they’re bringing those problems. They’re bringing drugs, they’re bringing crime. They’re rapists and some, I assume, are good people, but I speak to border guards and they’re telling us what we’re getting.");
     this.res.end();
   }
   else {
