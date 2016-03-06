@@ -24,7 +24,7 @@ else if(request.name == "Tristen Mejias-Thompson") {
 else {
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
-    postMessage(request.name + " is a cool guy");
+    postMessage(request.name + ", you can help make America great again by voting Trump");
     this.res.end();
   }
   else if(request.text && wall.test(request.text)) {
