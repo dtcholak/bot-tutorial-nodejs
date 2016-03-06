@@ -14,6 +14,11 @@ if(request.name == "Dillan Nayee") {
     postMessage("TERRORIST!");
     this.res.end();
 }
+else if(request.name == "Tristen Mejias-Thompson") {
+    this.res.writeHead(200);
+    postMessage("said the faggot");
+    this.res.end();
+}
 else {
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
