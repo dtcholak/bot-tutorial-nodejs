@@ -9,6 +9,9 @@ function respond() {
       var wall = /(wall)/i;
       var ping = /(Ping)/;
       var mexican = /(mexican|mexicans|mexico)/i;
+      var clinton = /(clinton)/i;
+      var anime = /(anime)/i;
+      var salty = /^\/salty$/;
       
 if(request.name != "Trump") {      
 if(request.name == "Dillan Nayee") {
@@ -24,7 +27,7 @@ else if(request.name == "Tristen Mejias-Thompson") {
 else {
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
-    postMessage(request.name + ", you can help make America great again by voting Trump");
+    postMessage(request.name + ", you can help make America great again by voting Trump.");
     this.res.end();
   }
   else if(request.text && wall.test(request.text)) {
@@ -40,6 +43,21 @@ else {
   else if(request.text && mexican.test(request.text)) {
     this.res.writeHead(200);
     postMessage("When Mexico sends its people, they’re not sending the best. They’re sending people that have lots of problems and they’re bringing those problems. They’re bringing drugs, they’re bringing crime. They’re rapists and some, I assume, are good people, but I speak to border guards and they’re telling us what we’re getting.");
+    this.res.end();
+  }
+  else if(request.text && clinton.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://i.imgur.com/ernqWWP.png");
+    this.res.end();
+  }
+  else if(request.text && anime.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://i.imgur.com/7JQ2auJ.jpg");
+    this.res.end();
+  }
+    else if(request.text && salty.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://i.imgur.com/K6DzqWd.jpg");
     this.res.end();
   }
   else {
