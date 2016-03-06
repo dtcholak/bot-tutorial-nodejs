@@ -6,8 +6,9 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool guy$/;
-      var wall = /(wall | wall | wall|wall)/i;
+      var wall = /(wall)/i;
       var ping = /(Ping)/;
+      var mexican = /(mexican)/i;
       
 if(request.name == "Dillan Nayee") {
     this.res.writeHead(200);
