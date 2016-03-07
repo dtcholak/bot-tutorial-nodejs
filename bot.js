@@ -14,16 +14,12 @@ function respond() {
       var salt = /^\/salt$/;
       
 if(request.name != "Trump") {      
-if(request.name == "Dillan Nayee") {
-    this.res.writeHead(200);
-    postMessage("TERRORIST!");
-    this.res.end();
-}
-else if(request.name == "Tristen Mejias-Thompson") {
+
+if(request.name == "Tristen Mejias-Thompson") {
     this.res.writeHead(200);
     postMessage("said the faggot");
     this.res.end();
-}
+    }
 else {
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
@@ -55,9 +51,14 @@ else {
     postMessage("http://i.imgur.com/7JQ2auJ.jpg");
     this.res.end();
   }
-    else if(request.text && salt.test(request.text)) {
+  else if(request.text && salt.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://i.imgur.com/K6DzqWd.jpg");
+    this.res.end();
+  }
+  else if(request.name == "Dillan Nayee") {
+    this.res.writeHead(200);
+    postMessage("TERRORIST!");
     this.res.end();
   }
   else {
@@ -71,7 +72,7 @@ else {
   console.log("don't care");
   this.res.writeHead(200);
   this.res.end();
-}
+  }
 }
 
 function postMessage(response) {
