@@ -11,7 +11,7 @@ function respond() {
       var mexican = /(mexican|mexicans|mexico)/i;
       var clinton = /(clinton)/i;
       var anime = /(anime)/i;
-      var salty = /^\/salty$/;
+      var salt = /^\/salt$/;
       
 if(request.name != "Trump") {      
 if(request.name == "Dillan Nayee") {
@@ -55,7 +55,7 @@ else {
     postMessage("http://i.imgur.com/7JQ2auJ.jpg");
     this.res.end();
   }
-    else if(request.text && salty.test(request.text)) {
+    else if(request.text && salt.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://i.imgur.com/K6DzqWd.jpg");
     this.res.end();
