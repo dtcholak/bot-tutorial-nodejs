@@ -15,12 +15,6 @@ function respond() {
       
 if(request.name != "Trump") {      
 
-if(request.name == "Tristen Mejias-Thompson") {
-    this.res.writeHead(200);
-    postMessage("said the faggot");
-    this.res.end();
-    }
-else {
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(request.name + ", you can help make America great again by voting Trump.");
@@ -58,7 +52,12 @@ else {
   }
   else if(request.name == "Dillan Nayee") {
     this.res.writeHead(200);
-    postMessage("TERRORIST!");
+    //postMessage("TERRORIST!");
+    this.res.end();
+  }
+  else if(request.name == "Tristen Mejias-Thompson") {
+    this.res.writeHead(200);
+    //postMessage("said the faggot");
     this.res.end();
   }
   else {
@@ -66,7 +65,6 @@ else {
     this.res.writeHead(200);
     this.res.end();
   }
-}
 }
 else {
   console.log("don't care");
