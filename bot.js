@@ -15,7 +15,7 @@ if(request.name != "Sanders") {
     this.res.writeHead(200);
     postMessage(request.name + ", rise up Wall Street and take back your country!");
     this.res.end();
-
+  }
   else if(request.text && ping.test(request.text)) {
     this.res.writeHead(200);
     postMessage("pong");
