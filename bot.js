@@ -7,7 +7,7 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool guy$/;
       var ping = /(Ping)/;
-      var free = /(free)/i/;
+      var free = /(free)/i;
       
 if(request.name != "Sanders") {      
 
