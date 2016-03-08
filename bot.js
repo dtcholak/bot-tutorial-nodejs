@@ -8,13 +8,72 @@ function respond() {
       botRegex = /^\/cool guy$/;
       var ping = /(Ping)/;
       var free = /(free)/i;
+      var meme = /(meme)/i;
+      
       
 if(request.name != "Sanders") {      
-
+  var memeselect = Math.floor(Math.random() * 10)
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(request.name + ", rise up Wall Street and take back your country!");
     this.res.end();
+  }
+  else if(request.text && meme.test(request.text)) {
+    if(memeselect == 0) {
+    this.res.writeHead(200);
+    postMessage("http://i.imgur.com/XCOkDKE.jpg");
+    this.res.end();
+    }
+    else if(memeselect == 1) {
+    this.res.writeHead(200);
+    postMessage("http://img.ifcdn.com/images/c4d5097bdc95619de54f7316efbff177f7b4c3d12808a094dff5a87a53f795fb_1.jpg");
+    this.res.end();
+    }    
+    else if(memeselect == 1) {
+    this.res.writeHead(200);
+    postMessage("http://3.bp.blogspot.com/-vor5AQ0zilc/VcwzKamXwpI/AAAAAAAAEls/RjL_a4Mf7S4/s1600/11822621_1102603493086525_2387580299811241335_n.jpg");
+    this.res.end();
+    }
+    else if(memeselect == 2) {
+    this.res.writeHead(200);
+    postMessage("http://img.ifcdn.com/images/faa68fad752d34e943ab397effce54fea772dabe67ca3a31fcb227d376fec22f_1.jpg");
+    this.res.end();
+    }
+    else if(memeselect == 3) {
+    this.res.writeHead(200);
+    postMessage("http://i0.kym-cdn.com/photos/images/newsfeed/001/067/893/198.jpg");
+    this.res.end();
+    }
+    else if(memeselect == 4) {
+    this.res.writeHead(200);
+    postMessage("https://pbs.twimg.com/media/CXwpE54WYAA0ED9.png");
+    this.res.end();
+    }
+    else if(memeselect == 5) {
+    this.res.writeHead(200);
+    postMessage("http://www.timrusso.org/wp-content/uploads/2016/02/12696530_10207185431852206_791550899_o.jpg");
+    this.res.end();
+    }
+    else if(memeselect == 6) {
+    this.res.writeHead(200);
+    postMessage("https://thoughtcatalog.files.wordpress.com/2016/01/screen-shot-2016-01-29-at-2-29-27-pm.png?w=800");
+    this.res.end();
+    }
+    else if(memeselect == 7) {
+    this.res.writeHead(200);
+    postMessage("https://s.yimg.com/ny/api/res/1.2/eQY9JY1bGg0WnNR9hgj4Ew--/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAwO2lsPXBsYW5l/http://l.yimg.com/cd/resizer/2.0/FIT_TO_WIDTH-w960/1dc0008549eacb825ff50cf5d63a3b0b81d33057.jpg");
+    this.res.end();
+    }
+    else if(memeselect == 8) {
+    this.res.writeHead(200);
+    postMessage("http://img.ifcdn.com/images/5f43be8ce780f7206d2362be6a996b470631b26c424c97ac8a9041a30dc23934_1.jpg");
+    this.res.end();
+    }
+    else {
+    this.res.writeHead(200);
+    postMessage("http://reverbpress.com/wp-content/uploads/2016/01/pennywise.jpg");
+    this.res.end();
+    }
   }
   else if(request.text && ping.test(request.text)) {
     this.res.writeHead(200);
