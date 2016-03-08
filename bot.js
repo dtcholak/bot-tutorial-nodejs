@@ -6,58 +6,29 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool guy$/;
-      var wall = /(wall)/i;
       var ping = /(Ping)/;
-      var mexican = /(mexican|mexicans|mexico)/i;
-      var clinton = /(clinton)/i;
-      var anime = /(anime)/i;
-      var salt = /^\/salt$/;
+      var free = /(free)/;
       
-if(request.name != "Trump") {      
+if(request.name != "Sanders") {      
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
-    postMessage(request.name + ", you can help make America great again by voting Trump.");
+    postMessage(request.name + ", rise up Wall Street and take back your country!");
     this.res.end();
-  }
-  else if(request.text && wall.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("http://i.imgur.com/IdvRpeU.png");
-    this.res.end();
-  }
+
   else if(request.text && ping.test(request.text)) {
     this.res.writeHead(200);
     postMessage("pong");
     this.res.end();
   }
-  else if(request.text && mexican.test(request.text)) {
+  else if(request.text && free.test(request.text)) {
     this.res.writeHead(200);
-    postMessage("When Mexico sends its people, they’re not sending the best. They’re sending people that have lots of problems and they’re bringing those problems. They’re bringing drugs, they’re bringing crime. They’re rapists and some, I assume, are good people, but I speak to border guards and they’re telling us what we’re getting.");
-    this.res.end();
-  }
-  else if(request.text && clinton.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("http://i.imgur.com/ernqWWP.png");
-    this.res.end();
-  }
-  else if(request.text && anime.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("http://i.imgur.com/7JQ2auJ.jpg");
-    this.res.end();
-  }
-  else if(request.text && salt.test(request.text)) {
-    this.res.writeHead(200);
-    postMessage("http://i.imgur.com/K6DzqWd.jpg");
-    this.res.end();
-  }
-  else if(request.name == "Dillan Nayee") {
-    this.res.writeHead(200);
-    //postMessage("TERRORIST!");
+    postMessage("http://img.ifcdn.com/images/7e88ddeaa016dd05aa366a4685d7978da73997648a0bb388e083d9908be3c93a_1.jpg");
     this.res.end();
   }
   else if(request.name == "Tristen Mejias-Thompson") {
     this.res.writeHead(200);
-    //postMessage("said the faggot");
+    postMessage("said the homosexual individual struggling against the greed of the Wall Street elite");
     this.res.end();
   }
   else {
