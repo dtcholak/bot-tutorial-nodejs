@@ -57,7 +57,7 @@ if(request.name != "Trump") {
   }
   else if(request.name == "Tristen Mejias-Thompson") {
     this.res.writeHead(200);
-    //postMessage("said the faggot");
+    postMessage("Ok little Tristen, I have big hands");
     this.res.end();
   }
   else {
