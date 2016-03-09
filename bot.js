@@ -57,7 +57,7 @@ if(request.name != "Trump") {
   }
   else if(request.name == "Tristen Mejias-Thompson") {
     this.res.writeHead(200);
-    postMessage("Ok little Tristen, I have big hands");
+    postMessage("Ok little Tristen, my hands are normal sized");
     this.res.end();
   }
   else {
