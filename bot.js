@@ -15,7 +15,7 @@ if(request.name != "Sanders") {
   var memeselect = Math.floor(Math.random() * 10)
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
-    postMessage(request.name + ", rise up Wall Street and take back your country!");
+    postMessage(request.name + ", rise up against Wall Street and take back your country!");
     this.res.end();
   }
   else if(request.text && meme.test(request.text)) {
@@ -87,7 +87,7 @@ if(request.name != "Sanders") {
   }
   else if(request.name == "Tristen Mejias-Thompson") {
     this.res.writeHead(200);
-    postMessage("said the homosexual individual struggling against the greed of the Wall Street elite");
+    //postMessage("said the homosexual individual struggling against the greed of the Wall Street elite");
     this.res.end();
   }
   else {
