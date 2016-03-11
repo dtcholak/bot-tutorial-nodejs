@@ -52,12 +52,12 @@ if(request.name != "Trump") {
   }
   else if(request.name == "Dillan Nayee") {
     this.res.writeHead(200);
-    //postMessage("TERRORIST!");
+    postMessage("He can guarantee there's no problem ;)");
     this.res.end();
   }
   else if(request.name == "Tristen Mejias-Thompson") {
     this.res.writeHead(200);
-    postMessage("Ok little Tristen, my hands are normal sized");
+    //postMessage("Ok little Tristen, my hands are normal sized");
     this.res.end();
   }
   else {
