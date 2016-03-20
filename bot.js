@@ -52,7 +52,7 @@ if(request.name != "Trump") {
   }
   else if(request.name == "Dillan Nayee") {
     this.res.writeHead(200);
-    postMessage("Thanks for the screenshot, enjoy your 2 week ban");
+    //postMessage("Thanks for the screenshot, enjoy your 2 week ban");
     this.res.end();
   }
   else if(request.name == "Tristen Mejias-Thompson") {
