@@ -12,12 +12,30 @@ function respond() {
       var clinton = /(clinton)/i;
       var anime = /(anime)/i;
       var salt = /^\/salt$/;
+      var calculate = /(calculate)/i;
+      var statloop = 0;
+      var statsum = 0;
+      var statgame = 0;
       
 if(request.name != "Trump") {      
 
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(request.name + ", you can help make America great again by voting Trump.");
+    this.res.end();
+  }
+  else if(request.text && calculate.test(request.text)) {
+    this.res.writeHead(200);
+    while (statloop != 10) {
+      while (statgame <= 1) {
+        statgame = statgame + Math.random();
+        statsum = statsum + 100;
+      }
+      statgame = 0;
+      statloop = statloop + 1;
+    }
+    statsum = statsum / 10;
+    postMessage("Simulation shows " + statsum);
     this.res.end();
   }
   else if(request.text && wall.test(request.text)) {
