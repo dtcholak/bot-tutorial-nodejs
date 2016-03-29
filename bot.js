@@ -26,7 +26,7 @@ if(request.name != "Trump") {
   }
   else if(request.text && calculate.test(request.text)) {
     this.res.writeHead(200);
-    while (statloop != 10000) {
+    while (statloop != 1000000) {
       while (statgame <= 1) {
         statgame = statgame + Math.random();
         statsum = statsum + 100;
@@ -34,7 +34,7 @@ if(request.name != "Trump") {
       statgame = 0;
       statloop = statloop + 1;
     }
-    statsum = statsum / 10000;
+    statsum = statsum / 1000000;
     postMessage("Simulation shows " + statsum);
     this.res.end();
   }
