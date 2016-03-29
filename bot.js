@@ -26,7 +26,7 @@ if(request.name != "Trump") {
   }
   else if(request.text && calculate.test(request.text)) {
     this.res.writeHead(200);
-    while (statloop != 10) {
+    while (statloop != 100) {
       while (statgame <= 1) {
         statgame = statgame + Math.random();
         statsum = statsum + 100;
