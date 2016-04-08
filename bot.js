@@ -9,13 +9,47 @@ function respond() {
       var ping = /(Ping)/;
       var free = /(free)/i;
       var meme = /(meme)/i;
-      
+      var election = /(election)/i;
       
 if(request.name != "Sanders") {      
   var memeselect = Math.floor(Math.random() * 10)
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
     postMessage(request.name + ", rise up against Wall Street and take back your country!");
+    this.res.end();
+  }
+  else if(request.text && election.test(request.text)) {
+    this.res.writeHead(200);
+    var voteLeft = 0;
+    var voteRight = 0;
+    var numVoters = 0;
+    var distance = 0;
+    var tie = 0;
+    var utilityRight;
+    var utilityLeft;
+    
+    while(numVoters != 100) {
+      var x1 = Random.nextGaussian();
+      var y1 = Random.nextGaussian();
+      distanceLeft = Math.sqrt((x1 + 1) * (x1 + 1) + (y1 + 1) * (y1 + 1));
+      distanceRight = Math.sqrt((x1 - 1) * (x1 - 1) + (y1 - 1) * (y1 - 1));
+      if(distanceLeft < distanceRight) {
+        voteLeft = voteLeft + 1;
+      }
+      else if(distanceRight < distanceLeft) {
+          voteRight = voteRight + 1;
+      }
+      numVoters = numVoters + 1;
+    }
+    if(voteRight > voteLeft) {
+      postMessage("Right wins with " + voteRight + " votes!");
+    }
+    else if(voteLeft > voteRight) {
+      postMessage("Left wins with " + voteLeft + " votes!");
+    }
+    else {
+      postMessage("Tie");
+    }
     this.res.end();
   }
   else if(request.text && meme.test(request.text)) {
